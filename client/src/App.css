@@ -1,42 +1,201 @@
-#root {
-  max-width: 1280px;
+.app {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+.app-header {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-header h1 {
+  color: #333;
+  margin-bottom: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.form-section,
+.meals-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-section h2,
+.meals-section h2 {
+  margin-top: 0;
+  color: #555;
+}
+
+.meal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.btn-secondary {
+  background-color: #757575;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #616161;
+}
+
+.btn-edit {
+  background-color: #2196F3;
+  color: white;
+  padding: 8px 16px;
+}
+
+.btn-edit:hover {
+  background-color: #0b7dda;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+}
+
+.btn-delete:hover {
+  background-color: #da190b;
+}
+
+.meal-list {
+  display: grid;
+  gap: 15px;
+}
+
+.meal-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.meal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.meal-time-badge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.meal-calories {
+  color: #666;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.meal-description {
+  color: #555;
+  margin: 10px 0;
+}
+
+.meal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-message button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #c62828;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
