@@ -1,3 +1,3 @@
 # React + Vite
 
-In this server, I'm trying to create a food plan 
+In this project were are trying to create a meal plan
